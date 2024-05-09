@@ -1,0 +1,18 @@
+.robe-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 45px;
+    margin-top: 45px;
+}
+
+.robe-container h3{
+    color: #D2232A;
+    font-size: 24px;
+}
+
+.robe-images{
+    display: flex;
+    gap: 45px;
+}

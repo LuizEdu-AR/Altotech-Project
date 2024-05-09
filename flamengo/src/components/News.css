@@ -1,0 +1,36 @@
+.news-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 45px;
+    margin: 45px 0;
+}
+
+.news-container h3{
+    color: #D2232A;
+    font-size: 24px;
+}
+
+.news-container form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+input[type="text"]{
+    width: 500px;
+    height: 50px;
+    border: 2px solid #D2232A;
+    padding-left: 10px;
+}
+
+input[type="submit"]{
+    background-color: #D2232A;
+    color: white;
+    border: none;
+    height: 50px;
+    width: 300px;
+    font-size: 24px;
+}

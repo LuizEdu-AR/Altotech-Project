@@ -1,0 +1,94 @@
+/* main container */
+
+.main-container{
+    background-color: #D2232A;
+    color: white;
+    height: 397px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-options-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    gap: 62px;
+}
+
+.footer-options-container h2{
+    font-size: 24px;
+}
+
+.footer-options-container li{
+    list-style: none;
+}
+
+.footer-options-container a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.crflamengo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.crflamengo p{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.crflamengo img{
+    width: 77.58px;
+    height: 96px;
+}
+
+.payment-options ul{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.paymentmethod{
+    margin-top: 10px;
+}
+
+.footer-options ul{
+    margin-top: 10px;
+}
+
+
+/* copyright container */
+.copyright-container{
+    background-color: #000;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright-container p{
+    color: white;
+    font-size: 16px;
+}
+
+
+/* Develops container */
+
+.develops-container{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 104px;
+}
+
+.develops-container p{
+    font-weight: 600;
+}
