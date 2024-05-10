@@ -1,21 +1,15 @@
-import Logo from '../assets/logoflamengo1.png'
-
 // imagens e svg
-import Visa from '../assets/visa.svg'
-import Master from '../assets/master.svg'
-import Pix from '../assets/pix.svg'
-import Amexpress from '../assets/amexpress.svg'
-import Paypal from '../assets/paypal.svg'
-import Altotech from '../assets/logoaltotech.png'
+import { Images } from '../../assets/img'
+import { Svgs } from '../../assets/svg'
 
-import './Footer.css'
+import './styles.css'
 
 const Footer = () => {
     return (
         <div className='footer-maincontainer'>
             <div className="main-container">
                 <div className="crflamengo">
-                    <img src={Logo} alt="Logo Flamengo" />
+                    <img src={Images.LogoFlamengo1} alt="Logo Flamengo" />
                     <p>CLUBE DE REGATAS DO FLAMENGO</p>
                 </div>
                 <div className="footer-options-container">
@@ -48,13 +42,13 @@ const Footer = () => {
                         <h2>Informações</h2>
                         <div className="paymentmethod">
                             <ul>
-                                <li><img src={Visa} alt="Visa" /></li>
-                                <li><img src={Master} alt="Master" /></li>
-                                <li><img src={Pix} alt="Pix" /></li>
+                                <li><img src={Svgs.Visa} alt="Visa" /></li>
+                                <li><img src={Svgs.Master} alt="Master" /></li>
+                                <li><img src={Svgs.Pix} alt="Pix" /></li>
                             </ul>
                             <ul>
-                                <li><img src={Amexpress} alt="Amexpress" /></li>
-                                <li><img src={Paypal} alt="Paypal" /></li>
+                                <li><img src={Svgs.Amexpress} alt="Amexpress" /></li>
+                                <li><img src={Svgs.Paypal} alt="Paypal" /></li>
                             </ul>
                         </div>
                     </div>
@@ -64,9 +58,9 @@ const Footer = () => {
                 <p>&copy; 2024 CLube Regatas do Flamengo, Todos os direitos reservados</p>
             </div>
             <div className="develops-container">
-                <img src={Altotech} alt="Altotech" />
+                <img src={Images.LogoAltotech} alt="Altotech" />
                 <p>Devoloped by Hillary Diniz & Luiz Eduardo A.</p>
-                <img src={Altotech} alt="Altotech" />
+                <img src={Images.LogoAltotech} alt="Altotech" />
             </div>
         </div>
     )

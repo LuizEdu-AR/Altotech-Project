@@ -2,7 +2,7 @@ import { useRouteError } from "react-router-dom";
 
 import './ErrorPage.css';
 
-import Logo from '../assets/logoflamengobrasao.png'
+import Logo from '../assets/img/logoflamengobrasao.png'
 
 export default function ErrorPage() {
   const error = useRouteError();

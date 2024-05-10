@@ -23,6 +23,11 @@
 .header-menu a{
     text-decoration: none;
     color: white;
+    transition: 0.7s;
+}
+
+.header-menu a:hover{
+    color: red;
 }
 
 .options-container{

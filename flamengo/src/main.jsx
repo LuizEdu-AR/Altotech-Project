@@ -13,6 +13,9 @@ import {
 import ErrorPage from './routes/ErrorPage.jsx';
 
 import Masculine from './routes/Masculine.jsx';
+import Feminine from './routes/Feminine.jsx';
+import Infantil from './routes/Infantil.jsx';
+import Accessories from './routes/Accessories.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +26,18 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Masculine />,
+      },
+      {
+        path: "/feminino",
+        element: <Feminine />,
+      },
+      {
+        path: "/infantil",
+        element: <Infantil />,
+      },
+      {
+        path: "/acessorios",
+        element: <Accessories />,
       },
     ],
   },

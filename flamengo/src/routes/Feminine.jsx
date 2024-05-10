@@ -4,22 +4,22 @@ import Announce from '../components/Announce'
 import OfficialRobe from '../components/OfficialRobe'
 import News from '../components/News'
 import MainImage from '../components/MainImage'
-import MoreMasculine from '../components/MoreMasculine'
-import OtherMasculine from '../components/OtherMasculine'
+import MoreFeminine from '../components/MoreFeminine'
+import OtherFeminine from '../components/OtherFeminine'
 
 import './Masculine.css'
 
-const Masculine = () => {
+const Feminine = () => {
   return (
     <div>
       <MainImage />
-      <MoreMasculine />
+      <MoreFeminine />
       <Announce />
-      <OtherMasculine />
+      <OtherFeminine />
       <OfficialRobe />
       <News />
     </div>
   )
 }
 
-export default Masculine
+export default Feminine

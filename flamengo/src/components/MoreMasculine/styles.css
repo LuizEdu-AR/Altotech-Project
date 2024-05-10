@@ -1,0 +1,30 @@
+.h2-more{
+    font-size: 24px;
+    color: #D2232A;
+    text-align: center;
+}
+
+.products-container{
+    max-width: 228px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.products-container h3{
+    font-size: 16px;
+}
+
+.products-container p{
+    color: #D2232A;
+    font-weight: 700;
+}
+
+.products-container button{
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: #D2232A;
+    color: #fff;
+    font-size: 16px;
+}
