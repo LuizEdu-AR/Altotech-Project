@@ -19,14 +19,14 @@
     gap: 40px;
 }
 
-input[type="text"]{
+.news-input{
     width: 500px;
     height: 50px;
     border: 2px solid #D2232A;
     padding-left: 10px;
 }
 
-input[type="submit"]{
+.submit-news{
     background-color: #D2232A;
     color: white;
     border: none;

@@ -1,0 +1,60 @@
+.coder-main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 0;
+}
+
+.coder-container{
+    background-color: #ededed;
+    border-radius: 30px;
+    width: 606px;
+}
+
+.seta-container{
+    padding: 15px 0 0 15px;
+}
+
+.codigo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5px;
+    gap: 50px;
+}
+
+.codigo-container h2{
+    padding: 0 87px;
+    text-align: center;
+}
+
+.coder-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0;
+}
+
+.coder-label{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    margin-bottom: 50px;
+}
+
+.coder-span{
+    color: #D2232A;
+    font-weight: 500;
+}
+
+.coder-submit{
+    padding: 7px 163px;
+    font-size: 24px;
+    border: none;
+    background-color: #D2232A;
+    color: #fff;
+    cursor: pointer;
+}

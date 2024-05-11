@@ -1,0 +1,111 @@
+.delproduct-main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 45px 0;
+    padding-bottom: 45px;
+    border-bottom: 3px solid #D2232A;
+}
+
+.log-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.log-container h2{
+    font-size: 24px;
+    color: #D2232A;
+    margin-bottom: 45px;
+}
+
+.delproduct-form-container{
+    background-color: #ededed;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 710px;
+}
+
+.del-container{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    color: #D2232A;
+    width: 100%;
+    justify-content: center;
+    height: 76px;
+}
+
+.del-container h3{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.delproduct-form-container form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin: 45px 0;
+    width: 367px;
+}
+
+.delproduct-form-container label{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.delproduct-form-container span{
+    color: #D2232A;
+    font-weight: 500;
+}
+
+.delproduct-form-container input[type="email"], input[type="password"], input[type="text"]{
+    border: 1px solid #d9d9d9;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ededed;
+}
+
+
+.submit-delproduct{
+    background-color: #D2232A;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.misspass{
+    font-size: 12px;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+.select-delproduct{
+    border: 1px solid #d9d9d9;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ededed;
+    color: #D2232A;
+}
+
+.date-delproduct{
+    border: 1px solid #d9d9d9;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ededed;
+    color: #D2232A;
+}
+
+.delproduct-submit{
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background-color: #D2232A;
+    color: #fff;
+    cursor: pointer;
+}

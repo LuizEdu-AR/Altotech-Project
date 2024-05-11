@@ -12,7 +12,7 @@ import { MoreMasculineMock } from './mocks';
 const MoreMasculine = () => {
   return (
     <div>
-        <h2 className='h2-more' style={{marginBottom: '45px', marginBottom: '45px'}}>MAIS VENDIDOS MASCULINO</h2>
+        <h2 className='h2-more' style={{marginTop: '45px', marginBottom: '45px'}}>MAIS VENDIDOS MASCULINO</h2>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}

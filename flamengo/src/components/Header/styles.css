@@ -1,4 +1,4 @@
-.header-container{
+.header-container {
     background-color: black;
     height: 70px;
     display: flex;
@@ -7,30 +7,55 @@
     padding: 0 104px;
 }
 
-.header-logo{
+.header-logo {
     color: white;
     display: flex;
     align-items: center;
 }
 
-.header-menu ul{
+.header-menu ul {
     display: flex;
     list-style: none;
     justify-content: space-between;
     gap: 25px;
 }
 
-.header-menu a{
+.header-menu li{
+    transition: 0.7s;
+}
+
+.header-menu li:hover {
+    transform: scale(1.05);
+    color: red;
+}
+
+.header-menu a {
     text-decoration: none;
     color: white;
     transition: 0.7s;
 }
 
-.header-menu a:hover{
+.header-menu a:hover {
     color: red;
 }
 
-.options-container{
+.options-container {
     display: flex;
     gap: 25px;
+}
+
+.header-logo img {
+    transition: 0.7s;
+}
+
+.header-logo img:hover {
+    transform: scale(1.1);
+}
+
+.options-container img{
+    transition: 0.7s;
+}
+
+.options-container img:hover {
+    transform: scale(1.1);
 }

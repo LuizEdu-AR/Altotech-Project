@@ -67,7 +67,7 @@
 /* copyright container */
 .copyright-container{
     background-color: #000;
-    height: 100px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,7 +82,7 @@
 /* Develops container */
 
 .develops-container{
-    height: 100px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;

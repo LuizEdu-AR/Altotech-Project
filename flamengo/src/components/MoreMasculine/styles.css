@@ -28,3 +28,11 @@
     color: #fff;
     font-size: 16px;
 }
+
+.products-container img{
+    transition: 0.7s;
+}
+
+.products-container img:hover{
+    transform: scale(1.03);
+}

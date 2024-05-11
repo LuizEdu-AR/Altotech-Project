@@ -25,7 +25,7 @@ const Header = () => {
             <div className="options-container">
                 <img src={Svgs.Search} alt="Pesquisar" />
                 <img src={Svgs.Buy} alt="Carrinho de compras" />
-                <img src={Svgs.Perfil} alt="Perfil" />
+                <Link to="/usuario" style={{display: 'flex', justifyContent: 'center'}}><img src={Svgs.Perfil} alt="Perfil" /></Link>
             </div>
         </div>
     )

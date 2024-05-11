@@ -1,8 +1,19 @@
-.announce-container{
+.announce-container {
     margin-top: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 45px;
     margin-bottom: 45px;
+}
+
+.announce-container img {
+    transition: 0.7s;
+}
+
+.announce-container img:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 12px 1px rgba(210, 35, 42, 1);
+    -webkit-box-shadow: 0px 0px 12px 1px rgba(210, 35, 42, 1);
+    -moz-box-shadow: 0px 0px 12px 1px rgba(210, 35, 42, 1);
 }
