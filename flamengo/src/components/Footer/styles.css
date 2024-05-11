@@ -3,18 +3,19 @@
 .main-container{
     background-color: #D2232A;
     color: white;
-    height: 397px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 15px 0;
 }
 
 .footer-options-container{
     display: flex;
     justify-content: space-around;
-    margin-top: 50px;
     gap: 62px;
+    margin-top: 20px;
 }
 
 .footer-options-container h2{
@@ -39,7 +40,7 @@
 }
 
 .crflamengo p{
-    font-size: 32px;
+    font-size: 24px;
     font-weight: bold;
 }
 
@@ -63,11 +64,18 @@
     margin-top: 10px;
 }
 
+.footer-options h2{
+    font-size: 16px;
+}
+
+.footer-options a{
+    font-size: 12px;
+}
 
 /* copyright container */
 .copyright-container{
     background-color: #000;
-    height: 80px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,7 +90,7 @@
 /* Develops container */
 
 .develops-container{
-    height: 80px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
