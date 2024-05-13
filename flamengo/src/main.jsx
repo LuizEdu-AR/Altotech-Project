@@ -24,6 +24,7 @@ import ChangePasswordPage from './routes/ChangePasswordPage.jsx';
 import CadProductPage from './routes/CadProductPage.jsx';
 import DelProductPage from './routes/DelProductPage.jsx';
 import SearchPage from './routes/SearchPage.jsx';
+import ViewProductPage from './routes/ViewProductPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
       {
         path: "/pesquisar",
         element: <SearchPage />,
+      },
+      {
+        path: "/visualizar-produto",
+        element: <ViewProductPage />,
       },
     ],
   },

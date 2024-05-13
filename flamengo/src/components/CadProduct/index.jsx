@@ -14,7 +14,7 @@ const CadProduct = () => {
                         <div className="product-container">
                             <h3 style={{ borderBottom: '2px solid #d2232a' }}>Cadastrar</h3>
                             <Link to="/deletar-produto" style={{ color: '#d2232a', textDecoration: 'none' }}><h3>Remover</h3></Link>
-                            <h3>Visualizar</h3>
+                            <Link to="/visualizar-produto" style={{ color: '#d2232a', textDecoration: 'none' }}><h3>Visualizar</h3></Link>
                         </div>
                         <form>
                             <label>
