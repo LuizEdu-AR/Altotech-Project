@@ -25,6 +25,9 @@ import CadProductPage from './routes/CadProductPage.jsx';
 import DelProductPage from './routes/DelProductPage.jsx';
 import SearchPage from './routes/SearchPage.jsx';
 import ViewProductPage from './routes/ViewProductPage.jsx';
+import MantoOnePage from './routes/MantoOnePage.jsx';
+import MantoTwoPage from './routes/MantoTwoPage.jsx';
+import MantoThreePage from './routes/MantoThreePage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -83,6 +86,18 @@ const router = createBrowserRouter([
       {
         path: "/visualizar-produto",
         element: <ViewProductPage />,
+      },
+      {
+        path: "/manto-um",
+        element: <MantoOnePage />,
+      },
+      {
+        path: "/manto-dois",
+        element: <MantoTwoPage />,
+      },
+      {
+        path: "/manto-tres",
+        element: <MantoThreePage />,
       },
     ],
   },

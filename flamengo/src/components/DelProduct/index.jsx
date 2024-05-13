@@ -34,7 +34,7 @@ const DelProduct = () => {
                                 <input type="password" name="password" required />
                             </label>
                             <label>
-                            <input type="submit" value="CADASTRAR" className='delproduct-submit' />
+                            <input type="submit" value="REMOVER" className='delproduct-submit' />
                             </label>
                         </form>
                     </div>

@@ -11,7 +11,7 @@ import { MoreInfantilMock } from './mocks';
 const MoreInfantil = () => {
   return (
     <div>
-        <h2 className='h2-more' style={{marginBottom: '45px', marginBottom: '45px'}}>MAIS VENDIDOS INFANTIL</h2>
+        <h2 className='h2-more' style={{marginBottom: '45px', marginTop: '45px'}}>MAIS VENDIDOS INFANTIL</h2>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}

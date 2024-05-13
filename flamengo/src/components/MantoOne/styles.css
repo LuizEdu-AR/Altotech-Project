@@ -1,0 +1,66 @@
+.mantoone-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mantoone-h2{
+    text-align: center;
+    color: #d2232a;
+    margin: 45px 0;
+}
+
+.mantoone-main-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 45px;
+}
+
+.mantoone-card{
+    background-color: #f3f3f3;
+    width: 500px;
+    max-height: 300px;
+    display: flex;
+    padding: 10px;
+}
+
+.mantoonecard-img img{
+    max-width: 200px;
+    max-height: 200px;
+    transition: 0.7s;
+}
+
+.mantoonecard-img img:hover{
+    transform: scale(1.03);
+}
+
+.mantoonecard-options{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 20px;
+    padding: 10px 0;
+}
+
+.mantoonecard-submit{
+    background-color: #d2232a;
+    color: #fff;
+    border: none;
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+.mantoonecard-text{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.mantoonecard-price{
+    font-size: 16px;
+    color: #d2232a;
+    font-weight: 600;
+}
