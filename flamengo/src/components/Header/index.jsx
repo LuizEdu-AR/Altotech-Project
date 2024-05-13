@@ -23,7 +23,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className="options-container">
-                <img src={Svgs.Search} alt="Pesquisar" />
+                <Link to="/pesquisar" style={{display: 'flex', justifyContent: 'center'}}><img src={Svgs.Search} alt="Pesquisar" /></Link>
                 <img src={Svgs.Buy} alt="Carrinho de compras" />
                 <Link to="/usuario" style={{display: 'flex', justifyContent: 'center'}}><img src={Svgs.Perfil} alt="Perfil" /></Link>
             </div>

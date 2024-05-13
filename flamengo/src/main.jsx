@@ -23,6 +23,7 @@ import CoderPage from './routes/CoderPage.jsx';
 import ChangePasswordPage from './routes/ChangePasswordPage.jsx';
 import CadProductPage from './routes/CadProductPage.jsx';
 import DelProductPage from './routes/DelProductPage.jsx';
+import SearchPage from './routes/SearchPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
       {
         path: "/deletar-produto",
         element: <DelProductPage />,
+      },
+      {
+        path: "/pesquisar",
+        element: <SearchPage />,
       },
     ],
   },
