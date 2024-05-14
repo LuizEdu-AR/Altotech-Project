@@ -1,3 +1,18 @@
+.announceheader-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d2232a;
+    height: 40px;
+    gap: 15px;
+}
+
+.announceheader-h3{
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+}
+
 .header-container {
     background-color: black;
     height: 70px;
@@ -44,12 +59,12 @@
     gap: 25px;
 }
 
-.header-logo img {
+.header-logo {
     transition: 0.7s;
 }
 
-.header-logo img:hover {
-    transform: scale(1.1);
+.header-logo:hover {
+    transform: scale(1.03);
 }
 
 .options-container img{

@@ -55,7 +55,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="copyright-container">
-                <p>&copy; 2024 CLube Regatas do Flamengo, Todos os direitos reservados</p>
+                <p>&copy; 2024 CLube Regatas do Flamengo</p>
             </div>
             <div className="develops-container">
                 <img src={Images.LogoAltotech} alt="Altotech" />
