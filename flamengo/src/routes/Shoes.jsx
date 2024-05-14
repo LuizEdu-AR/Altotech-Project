@@ -7,9 +7,14 @@ import MainImage from '../components/MainImage'
 import MoreShoes from '../components/MoreShoes'
 import OtherShoes from '../components/OtherShoes'
 
+import { useEffect } from 'react'
+
 import './Masculine.css'
 
 const Shoes = () => {
+    useEffect(() => {
+        document.title = 'Produtos Calçados - Flamengo';
+    }, []);
     return (
         <div>
             <MainImage />

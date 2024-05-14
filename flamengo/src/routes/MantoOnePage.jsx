@@ -4,7 +4,12 @@ import OfficialRobe from '../components/OfficialRobe'
 import News from '../components/News'
 import MantoOne from '../components/MantoOne'
 
+import { useEffect } from 'react'
+
 const MantoOnePage = () => {
+  useEffect(() => {
+    document.title = 'Manto Um - Flamengo';
+  }, []);
   return (
     <div>
         <MantoOne />
