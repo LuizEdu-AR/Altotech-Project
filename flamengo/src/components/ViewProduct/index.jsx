@@ -12,7 +12,7 @@ const ViewProduct = () => {
                     <h2>SEJA BEM-VINDO</h2>
                     <div className="viewproduct-form-container">
                         <div className="view-container">
-                            <Link to="/cadastrar-produto" style={{textDecoration:'none', color:'#d2232a'}}><h3>Cadastrar</h3></Link>
+                            <Link to="/cadastrar-roupas" style={{textDecoration:'none', color:'#d2232a'}}><h3>Cadastrar</h3></Link>
                             <Link to="/deletar-produto" style={{textDecoration:'none', color:'#d2232a'}}><h3>Remover</h3></Link>
                             <h3 style={{ borderBottom: '2px solid #d2232a' }}>Visualizar</h3>
                         </div>

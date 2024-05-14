@@ -18,7 +18,7 @@ const Header = () => {
                 <ul>
                     <li><NavLink to="/">Masculino</NavLink></li>
                     <li><NavLink to="/feminino">Feminino</NavLink></li>
-                    <li><NavLink to="/infantil">Infantil</NavLink></li>
+                    <li><NavLink to="/calcados">Calçados</NavLink></li>
                     <li><NavLink to="/acessorios">Acessórios</NavLink></li>
                 </ul>
             </div>

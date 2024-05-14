@@ -26,7 +26,7 @@ const FuncCadlog = () => {
                             </label>
                             <label>
                                 <Link to="/confirmar-cpf"><span className='misspass'>Esqueci a senha?</span></Link>
-                                <Link to="/cadastrar-produto"><input type="submit" value="ENTRAR" className='funccadlog-submit' /></Link>
+                                <Link to="/cadastrar-roupas"><input type="submit" value="ENTRAR" className='funccadlog-submit' /></Link>
                             </label>
                         </form>
                     </div>
@@ -74,7 +74,7 @@ const FuncCadlog = () => {
                                 </select>
                             </label>
                             <label>
-                            <Link to="/cadastrar-produto"><input type="submit" value="CADASTRAR" className='funccadlog-submit' /></Link>
+                            <Link to="/cadastrar-roupas"><input type="submit" value="CADASTRAR" className='funccadlog-submit' /></Link>
                             </label>
                         </form>
                     </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ChangePassword from '../components/ChangePassword.jsx'
+import ChangePassword from '../components/ChangePassword'
 
 
 const ChangePasswordPage = () => {

@@ -4,22 +4,22 @@ import Announce from '../components/Announce'
 import OfficialRobe from '../components/OfficialRobe'
 import News from '../components/News'
 import MainImage from '../components/MainImage'
-import MoreInfantil from '../components/MoreInfantil'
-import OtherInfantil from '../components/OtherInfantil'
+import MoreShoes from '../components/MoreShoes'
+import OtherShoes from '../components/OtherShoes'
 
 import './Masculine.css'
 
-const Infantil = () => {
+const Shoes = () => {
     return (
         <div>
             <MainImage />
-            <MoreInfantil />
+            <MoreShoes />
             <Announce />
-            <OtherInfantil />
+            <OtherShoes />
             <OfficialRobe />
             <News />
         </div>
     )
 }
 
-export default Infantil
+export default Shoes

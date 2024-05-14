@@ -6,12 +6,12 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 
-import { MoreInfantilMock } from './mocks';
+import { MoreShoesMock } from './mocks';
 
-const MoreInfantil = () => {
+const MoreShoes = () => {
   return (
     <div>
-        <h2 className='h2-more' style={{marginBottom: '45px', marginTop: '45px'}}>MAIS VENDIDOS INFANTIL</h2>
+        <h2 className='h2-more' style={{marginBottom: '45px', marginTop: '45px'}}>MAIS VENDIDOS CALÇADOS</h2>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
@@ -22,7 +22,7 @@ const MoreInfantil = () => {
         className='swiper-container'
         style={{height: '415px', marginLeft: '45px'}}
       >
-        {MoreInfantilMock.map((item)=>{
+        {MoreShoesMock.map((item)=>{
           return(
             <SwiperSlide key={item.id}>
               <div className="products-container">
@@ -39,4 +39,4 @@ const MoreInfantil = () => {
   )
 }
 
-export default MoreInfantil
+export default MoreShoes

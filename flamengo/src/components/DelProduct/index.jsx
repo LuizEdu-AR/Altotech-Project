@@ -12,7 +12,7 @@ const DelProduct = () => {
                     <h2>SEJA BEM-VINDO</h2>
                     <div className="delproduct-form-container">
                         <div className="del-container">
-                            <Link to="/cadastrar-produto" style={{textDecoration:'none', color:'#d2232a'}}><h3>Cadastrar</h3></Link>
+                            <Link to="/cadastrar-roupas" style={{textDecoration:'none', color:'#d2232a'}}><h3>Cadastrar</h3></Link>
                             <h3 style={{ borderBottom: '2px solid #d2232a' }}>Remover</h3>
                             <Link to="/visualizar-produto" style={{ color: '#d2232a', textDecoration: 'none' }}><h3>Visualizar</h3></Link>
                         </div>

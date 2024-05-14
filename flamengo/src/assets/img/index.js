@@ -76,6 +76,18 @@ import Abridor from './abridor.png'
 import EscudoBorracha from './escudoborracha.png'
 import Resina from './resina.png'
 import EscudoDourado from './escudodourado.png'
+import TermicoArell from './termicoarell.png'
+import ChuteiraElastic from './chuteiraelastic.png'
+import ChuteiraCoral from './chuteiracoral.png'
+import ChuteiraAdulto from './chuteiraadulto.png'
+import ChineloVelcro from './chinelovelcro.png'
+import ChineloBandeira from './chinelobandeira.png'
+import ChineloLeblon from './chineloleblon.png'
+import ChineloOutubro from './chinelooutubro.png'
+import ChineloSlim from './chineloslim.png'
+import ChineloSlimPreto from './chineloslimpreto.png'
+import ChineloTime from './chinelotime.png'
+import ChineloIdentidade from './chineloidentidade.png'
 
 export const Images = {
     Cashback,
@@ -156,4 +168,16 @@ export const Images = {
     EscudoBorracha,
     Resina,
     EscudoDourado,
+    TermicoArell,
+    ChuteiraElastic,
+    ChuteiraCoral,
+    ChuteiraAdulto,
+    ChineloVelcro,
+    ChineloBandeira,
+    ChineloLeblon,
+    ChineloOutubro,
+    ChineloSlim,
+    ChineloSlimPreto,
+    ChineloTime,
+    ChineloIdentidade,
 }

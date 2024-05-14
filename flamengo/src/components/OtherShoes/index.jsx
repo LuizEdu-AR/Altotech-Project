@@ -5,13 +5,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { OtherInfantilMock } from './mocks';
+import { OtherShoesMock } from './mocks';
 
 
-const OtherInfantil = () => {
+const OtherShoes = () => {
   return (
     <div>
-        <h2 className='h2-more' style={{marginBottom: '45px', marginBottom: '45px'}}>OUTROS PRODUTOS INFANTIL</h2>
+        <h2 className='h2-more' style={{marginBottom: '45px', marginBottom: '45px'}}>OUTROS PRODUTOS CALÇADOS</h2>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
@@ -22,7 +22,7 @@ const OtherInfantil = () => {
         className='swiper-container'
         style={{height: '415px', marginLeft: '45px'}}
       >
-        {OtherInfantilMock.map((item)=>{
+        {OtherShoesMock.map((item)=>{
           return(
             <SwiperSlide key={item.id}>
               <div className="products-container">
@@ -39,4 +39,4 @@ const OtherInfantil = () => {
   )
 }
 
-export default OtherInfantil
+export default OtherShoes

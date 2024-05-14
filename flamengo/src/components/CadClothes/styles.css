@@ -1,4 +1,4 @@
-.cadproduct-main-container{
+.cadclothes-main-container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -19,7 +19,7 @@
     margin-bottom: 45px;
 }
 
-.cadproduct-form-container{
+.cadclothes-form-container{
     background-color: #ededed;
     border-radius: 30px;
     display: flex;
@@ -28,7 +28,7 @@
     width: 710px;
 }
 
-.product-container{
+.clothes-container{
     display: flex;
     align-items: center;
     gap: 100px;
@@ -38,12 +38,12 @@
     height: 76px;
 }
 
-.product-container h3{
+.clothes-container h3{
     font-size: 24px;
     font-weight: 500;
 }
 
-.cadproduct-form-container form{
+.cadclothes-form-container form{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -52,18 +52,18 @@
     width: 367px;
 }
 
-.cadproduct-form-container label{
+.cadclothes-form-container label{
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.cadproduct-form-container span{
+.cadclothes-form-container span{
     color: #D2232A;
     font-weight: 500;
 }
 
-.cadproduct-form-container input[type="email"], input[type="password"], input[type="text"]{
+.cadclothes-form-container input[type="email"], input[type="password"], input[type="text"]{
     border: 1px solid #d9d9d9;
     padding: 10px;
     font-size: 16px;
@@ -71,7 +71,7 @@
 }
 
 
-.submit-cadproduct{
+.submit-cadclothes{
     background-color: #D2232A;
     color: #fff;
     border: none;
@@ -85,7 +85,7 @@
     margin-bottom: 5px;
 }
 
-.select-cadproduct{
+.select-cadclothes{
     border: 1px solid #d9d9d9;
     padding: 10px;
     font-size: 16px;
@@ -93,7 +93,7 @@
     color: #D2232A;
 }
 
-.date-cadproduct{
+.date-cadclothes{
     border: 1px solid #d9d9d9;
     padding: 10px;
     font-size: 16px;
@@ -101,11 +101,26 @@
     color: #D2232A;
 }
 
-.cadproduct-submit{
+.cadclothes-submit{
     padding: 10px;
     font-size: 16px;
     border: none;
     background-color: #D2232A;
     color: #fff;
     cursor: pointer;
+}
+
+.cadoptions-container{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    color: #000;
+    width: 100%;
+    justify-content: center;
+    height: 76px;
+}
+
+.cadoptions-container h3{
+    font-size: 20px;
+    font-weight: 500;
 }
