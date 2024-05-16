@@ -5,11 +5,12 @@
     background-color: #d2232a;
     height: 40px;
     gap: 15px;
+    box-sizing: border-box;
 }
 
 .announceheader-h3{
     color: #fff;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
 }
 
