@@ -6,19 +6,36 @@ import ProductCard from '../ProductCard'
 
 import { products } from '../../data/data'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 const Search = () => {
+    const inputRef = useRef(null);
+
+    const [products, setProducts] = useState([products]);
+
+    const [searchResults, setSearchResults] = useState([]);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const valor = inputRef.current.value.toLowerCase();
+
+        const filteredProducts = products.filter((product) =>
+            product.name.toLowerCase().includes(valor)
+        );
+
+        setSearchResults(filteredProducts);
+    };
     return (
         <div>
             <div className="search-main-container">
                 <div className="search-container">
-                    <form className="search-form">
+                    <form className="search-form" onSubmit={handleSubmit}>
                         <input
                             type="text"
                             name="pesquisar"
                             placeholder='Informe o nome do produto que deseja'
                             className='search-text'
+                            ref={inputRef}
                         />
                         <input
                             type="submit"
@@ -52,7 +69,7 @@ const Search = () => {
                         </select>
                     </div>
                 </div>
-                <div className="search-product-grid">
+                {/* <div className="search-product-grid">
                     {products.map((product, index) => {
                         const row = Math.floor(index / 4);
                         const col = index % 4;
@@ -63,7 +80,24 @@ const Search = () => {
                             </div>
                         );
                     })}
-                </div>
+                </div> */}
+
+                {searchResults.length > 0 && (
+                    <ul className="search-results">
+                        {searchResults.map((product) => (
+                            <li key={product.id}>
+                                <h3>{product.name}</h3>
+                                <p>{product.description}</p>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+
+                {searchResults.length === 0 && valor !== '' && (
+                    <p className="no-results">
+                        Nenhum produto encontrado com o nome "{valor}".
+                    </p>
+                )}
 
 
 
