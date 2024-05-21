@@ -3,6 +3,7 @@ import { Images } from '../../assets/img'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+// preciso que meu swiper passe os swiperslide atutomáticamente
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -13,7 +14,6 @@ const MainImage = () => {
 
     return (
         <Swiper
-
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
             slidesPerView={1}

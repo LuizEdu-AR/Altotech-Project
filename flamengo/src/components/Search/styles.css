@@ -1,4 +1,4 @@
-.search-main-container{
+.search-main-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,7 +6,7 @@
     margin-top: 45px;
 }
 
-.search-container{
+.search-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,19 +14,19 @@
     margin-bottom: 45px;
 }
 
-.search-form{
+.search-form {
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-.search-text{
+.search-text {
     border: none;
     width: 600px;
 }
 
-.search-submit{
+.search-submit {
     background-color: #d2232a;
     color: white;
     border: none;
@@ -34,28 +34,62 @@
     padding: 12px 45px;
 }
 
-.search-h2{
+.search-h2 {
     color: #d2232a;
     margin-bottom: 45px;
 }
 
-.search-select-container{
+.search-select-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
 
-.select-container{
+.select-container {
     display: flex;
     gap: 20px;
+    margin-bottom: 45px;
 }
 
-.search-select{
+.search-select {
     background-color: #000;
     color: #fff;
     font-size: 16px;
     width: 200px;
     padding: 5px 10px;
     font-weight: 500;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* produtos */
+
+.search-product-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    margin: 0px 150px;
+    overflow-y: auto;
+    max-height: 750px;
+    padding: 15px;
+    background-color: #fafafa;
+}
+
+.product-row {
+    display: flex;
+    width: 100%;
+}
+
+.product-col {
+    flex: 1 0 25%;
+    /* Ajustar a largura da coluna se necessário */
+    margin: 10px;
+    /* Adicionar espaçamento entre os produtos */
 }

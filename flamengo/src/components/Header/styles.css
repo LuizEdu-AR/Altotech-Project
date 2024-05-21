@@ -75,3 +75,17 @@
 .options-container img:hover {
     transform: scale(1.1);
 }
+
+.header-menu ul li::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #d2232a;
+    transition: width 0.3s;
+}
+
+.header-menu ul li:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+}

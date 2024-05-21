@@ -1,8 +1,12 @@
-import React from 'react'
-
 import './styles.css'
 
 import News from '../News'
+
+import ProductCard from '../ProductCard'
+
+import { products } from '../../data/data'
+
+import { useState } from 'react'
 
 const Search = () => {
     return (
@@ -10,8 +14,17 @@ const Search = () => {
             <div className="search-main-container">
                 <div className="search-container">
                     <form className="search-form">
-                        <input type="text" name="pesquisar" placeholder='Informe o que deseja' className='search-text' />
-                        <input type="submit" value="BUSCAR" className='search-submit' />
+                        <input
+                            type="text"
+                            name="pesquisar"
+                            placeholder='Informe o nome do produto que deseja'
+                            className='search-text'
+                        />
+                        <input
+                            type="submit"
+                            value="BUSCAR"
+                            className='search-submit'
+                        />
                     </form>
                 </div>
                 <h2 className='search-h2'>RESULTADO DA BUSCA</h2>
@@ -39,12 +52,23 @@ const Search = () => {
                         </select>
                     </div>
                 </div>
-                <div className="search-product-container"></div>
+                <div className="search-product-grid">
+                    {products.map((product, index) => {
+                        const row = Math.floor(index / 4);
+                        const col = index % 4;
+
+                        return (
+                            <div key={product.id} className={`product-row-${row} product-col-${col}`}>
+                                <ProductCard product={product} />
+                            </div>
+                        );
+                    })}
+                </div>
+
+
+
+                <News />
             </div>
-
-
-
-            <News />
         </div>
     )
 }

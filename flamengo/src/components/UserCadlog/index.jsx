@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 
 import './CadLog.css'
 
+// Guardando os dados do cadastro do usuário no test.js
+
 const UserCadlog = () => {
     return (
         <div>
