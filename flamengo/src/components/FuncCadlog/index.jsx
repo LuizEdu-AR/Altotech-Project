@@ -6,7 +6,7 @@ import { useState } from 'react'
 
 import './CadLog.css'
 
-import { funcArray } from '../../data/dataFunc.js'
+import { funcArray } from '../../data/dataFunc'
 
 const FuncCadlog = () => {
 
@@ -18,28 +18,29 @@ const FuncCadlog = () => {
         console.log(password)
     }
 
-    const Cadastro = (e) => {
+
+    const [funcionarios, setFuncionarios] = useState([])
+
+    const [name, setName] = useState('')
+    const [cpf, setCpf] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [passwordConfirm, setPasswordConfirm] = useState('')
+    const [birth, setBirth] = useState('')
+    const [gender, setGender] = useState('')
+
+    const Cadastro = async (e) => {
         e.preventDefault()
-
-        const [funcionarios, setFuncionarios] = useState([])
-
-        const nome = document.querySelector('input[name="nome"]').value
-        const cpf = document.querySelector('input[name="cpf"]').value
-        const email = document.querySelector('input[name="emailcad"]').value
-        const password = document.querySelector('input[name="passwordcad"]').value
-        const passwordConfirm = document.querySelector('input[name="confirm-password"]').value
-        const birth = document.querySelector('input[name="data-nascimento"]').value
-        const gender = document.querySelector('select[name="Gênero"]').value
-        const dataFunc = {
-            name: nome,
-            cpf: cpf,
-            email: email,
-            password: password,
-            passwordConfirm: passwordConfirm,
-            birth: birth,
-            gender: gender,
+        const newFuncionario = {
+            name,
+            cpf,
+            email,
+            password,
+            passwordConfirm,
+            birth,
+            gender,
         }
-        setFuncionarios([...funcionarios, dataFunc])
+        setFuncionarios([...funcArray, newFuncionario])
         console.log(funcionarios)
     }
 
@@ -106,10 +107,16 @@ const FuncCadlog = () => {
                             <Link to="/usuario" style={{ color: '#d2232a', textDecoration: 'none' }}><h3>Usuário</h3></Link>
                             <h3 style={{ borderBottom: '2px solid #d2232a' }}>Funcionário</h3>
                         </div>
-                        <form>
+                        <form onSubmit={Cadastro}>
                             <label>
                                 <span>Nome</span>
-                                <input type="text" name='nome' required />
+                                <input
+                                    type="text"
+                                    name='nome'
+                                    required
+                                    onChange={(e) => setName(e.target.value)}
+                                    value={name} 
+                                />
                             </label>
                             <label>
                                 <span>CPF</span>
@@ -118,6 +125,8 @@ const FuncCadlog = () => {
                                     name='cpf'
                                     required
                                     onBlur={VerificarCpf}
+                                    onChange={(e) => setCpf(e.target.value)}
+                                    value={cpf}
                                 />
                             </label>
                             <label>
@@ -127,11 +136,19 @@ const FuncCadlog = () => {
                                     name="emailcad"
                                     required
                                     onBlur={VerificarEmail}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    value={email}
                                 />
                             </label>
                             <label>
                                 <span>Senha</span>
-                                <input type="password" name="passwordcad" required />
+                                <input
+                                    type="password"
+                                    name="passwordcad"
+                                    required
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    value={password}
+                                />
                             </label>
                             <label>
                                 <span>Confirmar senha</span>
@@ -140,6 +157,8 @@ const FuncCadlog = () => {
                                     name="confirm-password"
                                     required
                                     onBlur={ConfirmarSenha}
+                                    onChange={(e) => setPasswordConfirm(e.target.value)}
+                                    value={passwordConfirm}
                                 />
                             </label>
                             <label>
@@ -150,11 +169,19 @@ const FuncCadlog = () => {
                                     id="data-nascimento"
                                     className='date-cadlog'
                                     required
+                                    onChange={(e) => setBirth(e.target.value)}
+                                    value={birth}
                                 />
                             </label>
                             <label>
                                 <span>Gênero</span>
-                                <select name="Gênero" className='select-cadlog'>
+                                <select
+                                    name="genero"
+                                    className='select-cadlog'
+                                    required
+                                    onChange={(e) => setGender(e.target.value)}
+                                    value={gender}
+                                >
                                     <option value="masculino">Masculino</option>
                                     <option value="feminino">Feminino</option>
                                     <option value="não-informar">Não informar</option>
@@ -165,7 +192,6 @@ const FuncCadlog = () => {
                                     type="submit"
                                     value="CADASTRAR"
                                     className='funccadlog-submit'
-                                    onClick={Cadastro}
                                 />
                             </label>
                         </form>
