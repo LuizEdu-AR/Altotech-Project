@@ -4,27 +4,73 @@ import News from '../News'
 
 import ProductCard from '../ProductCard'
 
-import { products } from '../../data/data'
+import { products } from '../../data/data.js'
 
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 
 const Search = () => {
     const inputRef = useRef(null);
 
-    const [products, setProducts] = useState([products]);
-
-    const [searchResults, setSearchResults] = useState([]);
+    const [valor, setValor] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        const valor = inputRef.current.value.toLowerCase();
+        setValor(inputRef.current.value);
+    }
 
-        const filteredProducts = products.filter((product) =>
-            product.name.toLowerCase().includes(valor)
-        );
+    const [searchResults, setSearchResults] = useState([]);
 
+    const handleSearch = () => {
+        const filteredProducts = products.filter((product) => {
+            if (product.text && valor) {
+                return product.text.toLowerCase().includes(valor.toLowerCase());
+            } else {
+                // Handle undefined cases (optional)
+                return false; // Or any other logic
+            }
+        });
         setSearchResults(filteredProducts);
     };
+
+    useEffect(() => {
+        handleSearch();
+    }, [valor]);
+
+    const [filter, setFilter] = useState('');
+
+    const handleFilter = (event) => {
+        setFilter(event.target.value);
+    }
+
+    useEffect(() => {
+        const filteredProducts = products.filter((product) => {
+            if (product.section && filter) {
+                return product.section.toLowerCase().includes(filter.toLowerCase());
+            } else {
+                return false;
+            }
+        });
+        setSearchResults(filteredProducts);
+    }, [filter]);
+
+    const [filterType, setFilterType] = useState('');
+
+    const handleFilterType = (event) => {
+        setFilterType(event.target.value);
+    }
+
+    useEffect(() => {
+        const filteredProducts = products.filter((product) => {
+            if (product.type && filterType) {
+                return product.type.toLowerCase().includes(filterType.toLowerCase());
+            } else {
+                return false;
+            }
+        });
+        setSearchResults(filteredProducts);
+    }, [filterType]);
+    
+
     return (
         <div>
             <div className="search-main-container">
@@ -41,6 +87,7 @@ const Search = () => {
                             type="submit"
                             value="BUSCAR"
                             className='search-submit'
+                        
                         />
                     </form>
                 </div>
@@ -50,7 +97,7 @@ const Search = () => {
                         <h3>Filtrar por</h3>
                     </div>
                     <div className="select-container">
-                        <select name="secao" className='search-select' defaultValue="" >
+                        <select name="secao" className='search-select' defaultValue="" onChange={handleFilter}>
                             <option value="">Seção</option>
                             <option value="tudo">Todas</option>
                             <option value="masculino">Masculino</option>
@@ -58,7 +105,8 @@ const Search = () => {
                             <option value="infantil">Infantil</option>
                             <option value="acessorios">Acessórios</option>
                         </select>
-                        <select name="tipo" className='search-select' defaultValue="" >
+                        <span>OU</span>
+                        <select name="tipo" className='search-select' defaultValue="" onChange={handleFilterType}>
                             <option value="">Tipo</option>
                             <option value="tudo">Todas</option>
                             <option value="camisa">Camisa</option>
@@ -69,37 +117,44 @@ const Search = () => {
                         </select>
                     </div>
                 </div>
-                {/* <div className="search-product-grid">
-                    {products.map((product, index) => {
-                        const row = Math.floor(index / 4);
-                        const col = index % 4;
 
-                        return (
-                            <div key={product.id} className={`product-row-${row} product-col-${col}`}>
-                                <ProductCard product={product} />
-                            </div>
-                        );
-                    })}
-                </div> */}
+                {valor === '' && searchResults.length === 0 && (
+                    <div className="search-results">
+                        {products.map((product) => (
+                            <ProductCard key={product.id} product={product} />
+                        ))}
+                    </div>
+                )}
 
                 {searchResults.length > 0 && (
-                    <ul className="search-results">
+                    <div className="search-results">
                         {searchResults.map((product) => (
-                            <li key={product.id}>
-                                <h3>{product.name}</h3>
-                                <p>{product.description}</p>
-                            </li>
+                            <ProductCard key={product.id} product={product} />
                         ))}
-                    </ul>
+                    </div>
                 )}
 
                 {searchResults.length === 0 && valor !== '' && (
                     <p className="no-results">
-                        Nenhum produto encontrado com o nome "{valor}".
+                        Nenhum resultado para "{valor}".
                     </p>
                 )}
 
+                {valor === '' && filter === "tudo" && (
+                    <div className="search-results">
+                        {products.map((product) => (
+                            product.section === "tudo" && <ProductCard key={product.id} product={product} />
+                        ))}
+                    </div>
+                )}
 
+                {valor === '' && filterType === "tudo" && (
+                    <div className="search-results">
+                        {products.map((product) => (
+                            product.type === "tudo" && <ProductCard key={product.id} product={product} />
+                        ))}
+                    </div>
+                )}
 
                 <News />
             </div>

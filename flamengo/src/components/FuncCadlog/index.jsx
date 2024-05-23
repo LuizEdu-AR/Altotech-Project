@@ -2,9 +2,62 @@ import React from 'react'
 
 import { Link } from 'react-router-dom'
 
+import { useState } from 'react'
+
 import './CadLog.css'
 
+import { funcArray } from '../../data/dataFunc.js'
+
 const FuncCadlog = () => {
+
+    const Login = (e) => {
+        e.preventDefault()
+        const email = document.querySelector('input[name="email"]').value
+        const password = document.querySelector('input[name="password"]').value
+        console.log(email)
+        console.log(password)
+    }
+
+    const Cadastro = (e) => {
+        e.preventDefault()
+
+        const [funcionarios, setFuncionarios] = useState([])
+
+        const nome = document.querySelector('input[name="nome"]').value
+        const cpf = document.querySelector('input[name="cpf"]').value
+        const email = document.querySelector('input[name="email"]').value
+        const password = document.querySelector('input[name="password"]').value
+        const passwordConfirm = document.querySelector('input[name="confirm-password"]').value
+        const birth = document.querySelector('input[name="data-nascimento"]').value
+        const gender = document.querySelector('select[name="Gênero"]').value
+        const dataFunc = {
+            nome,
+            cpf,
+            email,
+            password,
+            passwordConfirm,
+            birth,
+            gender
+        }
+        setFuncionarios([...funcArray, dataFunc])
+        console.log(funcionarios)
+    }
+
+    const ConfirmarSenha = () => {
+        const password = document.querySelector('input[name="password"]').value
+        const passwordConfirm = document.querySelector('input[name="confirm-password"]').value
+        if (password !== passwordConfirm) {
+            alert('As senhas não coincidem')
+        }
+    }
+
+    const VerificarEmail = () => {
+        const email = document.querySelector('input[name="email"]').value
+        const emailArray = funcArray.map((func) => func.email)
+        if (emailArray.includes(email)) {
+            alert('Email já cadastrado')
+        }
+    }
     return (
         <div>
             <div className='cadlog-main-container'>
@@ -26,7 +79,12 @@ const FuncCadlog = () => {
                             </label>
                             <label>
                                 <Link to="/confirmar-cpf"><span className='misspass'>Esqueci a senha?</span></Link>
-                                <Link to="/cadastrar-roupas"><input type="submit" value="ENTRAR" className='funccadlog-submit' /></Link>
+                                <input
+                                    type="submit"
+                                    value="ENTRAR"
+                                    className='funccadlog-submit'
+                                    onClick={Login}
+                                />
                             </label>
                         </form>
                     </div>
@@ -51,7 +109,12 @@ const FuncCadlog = () => {
                             </label>
                             <label>
                                 <span>Email</span>
-                                <input type="email" name="email" required />
+                                <input
+                                    type="email"
+                                    name="email"
+                                    required
+                                    onBlur={VerificarEmail}
+                                />
                             </label>
                             <label>
                                 <span>Senha</span>
@@ -59,11 +122,22 @@ const FuncCadlog = () => {
                             </label>
                             <label>
                                 <span>Confirmar senha</span>
-                                <input type="password" name="password" required />
+                                <input
+                                    type="password"
+                                    name="confirm-password"
+                                    required
+                                    onBlur={ConfirmarSenha}
+                                />
                             </label>
                             <label>
                                 <span>Data de Nascimento</span>
-                                <input type="date" name="data-nascimento" id="data-nascimento" className='date-cadlog' />
+                                <input
+                                    type="date"
+                                    name="data-nascimento"
+                                    id="data-nascimento"
+                                    className='date-cadlog'
+                                    required
+                                />
                             </label>
                             <label>
                                 <span>Gênero</span>
@@ -74,7 +148,12 @@ const FuncCadlog = () => {
                                 </select>
                             </label>
                             <label>
-                            <Link to="/cadastrar-roupas"><input type="submit" value="CADASTRAR" className='funccadlog-submit' /></Link>
+                                <input
+                                    type="submit"
+                                    value="CADASTRAR"
+                                    className='funccadlog-submit'
+                                    onClick={Cadastro}
+                                />
                             </label>
                         </form>
                     </div>

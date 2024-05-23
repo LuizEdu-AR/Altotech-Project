@@ -10,7 +10,7 @@ import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 
 const Header = () => {
     return (
-        <div>
+        <div className='header-main-container'>
             <div className="announceheader-container">
                 <LocalShippingIcon style={{ color: '#fff', fontSize: '24px' }} />
                 <h3 className='announceheader-h3'>1ª TROCA POR NOSSA CONTA - PRODUTOS EXCLUSIVOS</h3>
