@@ -19,7 +19,11 @@ const FuncCadlog = () => {
     }
 
 
-    const [funcionarios, setFuncionarios] = useState([])
+    const [funcionarios, setFuncionarios] = useState(funcArray)
+
+    const saveFuncionarios = () => {
+        localStorage.setItem('funcionarios', JSON.stringify(funcionarios))
+    }
 
     const [name, setName] = useState('')
     const [cpf, setCpf] = useState('')
@@ -40,16 +44,9 @@ const FuncCadlog = () => {
             birth,
             gender,
         }
-        setFuncionarios([...funcArray, newFuncionario])
-        console.log(funcionarios)
-    }
-
-    const ConfirmarSenha = () => {
-        const password = document.querySelector('input[name="passwordcad"]').value
-        const passwordConfirm = document.querySelector('input[name="confirm-password"]').value
-        if (password !== passwordConfirm) {
-            alert('As senhas não coincidem')
-        }
+        setFuncionarios([...funcionarios, newFuncionario])
+        saveFuncionarios()
+        console.log(funcionarios) 
     }
 
     const VerificarCpf = () => {
@@ -57,14 +54,6 @@ const FuncCadlog = () => {
         const cpfArray = funcArray.map((func) => func.cpf)
         if (cpfArray.includes(cpf)) {
             alert('CPF já cadastrado')
-        }
-    }
-
-    const VerificarEmail = () => {
-        const email = document.querySelector('input[name="emailcad"]').value
-        const emailArray = funcArray.map((func) => func.email)
-        if (emailArray.includes(email)) {
-            alert('Email já cadastrado')
         }
     }
     return (
@@ -80,7 +69,7 @@ const FuncCadlog = () => {
                         <form>
                             <label>
                                 <span>Email</span>
-                                <input type="emaillog" name="email" required />
+                                <input type="email" name="emaillog" required />
                             </label>
                             <label>
                                 <span>Senha</span>
@@ -128,6 +117,13 @@ const FuncCadlog = () => {
                                     onChange={(e) => setCpf(e.target.value)}
                                     value={cpf}
                                 />
+                                {
+                                    funcArray.map((func) => {
+                                        if (func.cpf === cpf) {
+                                            return <p>CPF já cadastrado</p>
+                                        }
+                                    })
+                                }
                             </label>
                             <label>
                                 <span>Email</span>
@@ -135,10 +131,16 @@ const FuncCadlog = () => {
                                     type="email"
                                     name="emailcad"
                                     required
-                                    onBlur={VerificarEmail}
                                     onChange={(e) => setEmail(e.target.value)}
                                     value={email}
                                 />
+                                {
+                                    funcArray.map((func) => {
+                                        if (func.email === email) {
+                                            return <p>Email já cadastrado</p>
+                                        }
+                                    })
+                                }
                             </label>
                             <label>
                                 <span>Senha</span>
@@ -156,10 +158,12 @@ const FuncCadlog = () => {
                                     type="password"
                                     name="confirm-password"
                                     required
-                                    onBlur={ConfirmarSenha}
                                     onChange={(e) => setPasswordConfirm(e.target.value)}
                                     value={passwordConfirm}
                                 />
+                                {
+                                    password !== passwordConfirm ? <p>As senhas não coincidem</p> : null
+                                }
                             </label>
                             <label>
                                 <span>Data de Nascimento</span>
