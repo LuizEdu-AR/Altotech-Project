@@ -25,34 +25,42 @@ const FuncCadlog = () => {
 
         const nome = document.querySelector('input[name="nome"]').value
         const cpf = document.querySelector('input[name="cpf"]').value
-        const email = document.querySelector('input[name="email"]').value
-        const password = document.querySelector('input[name="password"]').value
+        const email = document.querySelector('input[name="emailcad"]').value
+        const password = document.querySelector('input[name="passwordcad"]').value
         const passwordConfirm = document.querySelector('input[name="confirm-password"]').value
         const birth = document.querySelector('input[name="data-nascimento"]').value
         const gender = document.querySelector('select[name="Gênero"]').value
         const dataFunc = {
-            nome,
-            cpf,
-            email,
-            password,
-            passwordConfirm,
-            birth,
-            gender
+            name: nome,
+            cpf: cpf,
+            email: email,
+            password: password,
+            passwordConfirm: passwordConfirm,
+            birth: birth,
+            gender: gender,
         }
-        setFuncionarios([...funcArray, dataFunc])
+        setFuncionarios([...funcionarios, dataFunc])
         console.log(funcionarios)
     }
 
     const ConfirmarSenha = () => {
-        const password = document.querySelector('input[name="password"]').value
+        const password = document.querySelector('input[name="passwordcad"]').value
         const passwordConfirm = document.querySelector('input[name="confirm-password"]').value
         if (password !== passwordConfirm) {
             alert('As senhas não coincidem')
         }
     }
 
+    const VerificarCpf = () => {
+        const cpf = document.querySelector('input[name="cpf"]').value
+        const cpfArray = funcArray.map((func) => func.cpf)
+        if (cpfArray.includes(cpf)) {
+            alert('CPF já cadastrado')
+        }
+    }
+
     const VerificarEmail = () => {
-        const email = document.querySelector('input[name="email"]').value
+        const email = document.querySelector('input[name="emailcad"]').value
         const emailArray = funcArray.map((func) => func.email)
         if (emailArray.includes(email)) {
             alert('Email já cadastrado')
@@ -71,7 +79,7 @@ const FuncCadlog = () => {
                         <form>
                             <label>
                                 <span>Email</span>
-                                <input type="email" name="email" required />
+                                <input type="emaillog" name="email" required />
                             </label>
                             <label>
                                 <span>Senha</span>
@@ -105,20 +113,25 @@ const FuncCadlog = () => {
                             </label>
                             <label>
                                 <span>CPF</span>
-                                <input type="text" name='cpf' required />
+                                <input
+                                    type="text"
+                                    name='cpf'
+                                    required
+                                    onBlur={VerificarCpf}
+                                />
                             </label>
                             <label>
                                 <span>Email</span>
                                 <input
                                     type="email"
-                                    name="email"
+                                    name="emailcad"
                                     required
                                     onBlur={VerificarEmail}
                                 />
                             </label>
                             <label>
                                 <span>Senha</span>
-                                <input type="password" name="password" required />
+                                <input type="password" name="passwordcad" required />
                             </label>
                             <label>
                                 <span>Confirmar senha</span>
