@@ -7,14 +7,10 @@ import MainImage from '../components/MainImage'
 import MoreFeminine from '../components/MoreFeminine'
 import OtherFeminine from '../components/OtherFeminine'
 
-import { useEffect } from 'react'
-
 import './Masculine.css'
 
 const Feminine = () => {
-  useEffect(() => {
     document.title = 'Produtos Femininos - Flamengo';
-  }, []);
   return (
     <div>
       <MainImage />

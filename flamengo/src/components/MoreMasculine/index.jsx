@@ -27,7 +27,7 @@ const MoreMasculine = () => {
           return(
             <SwiperSlide key={item.id}>
               <div className="products-container">
-                <img src={item.url} alt={item.textAlt} />
+                <img src={item.url} alt={item.textAlt}/>
                 <h3>{item.text}</h3>
                 <p>{item.price}</p>
                 <button>COMPRAR</button>

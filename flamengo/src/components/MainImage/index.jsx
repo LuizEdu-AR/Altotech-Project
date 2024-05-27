@@ -23,22 +23,22 @@ const MainImage = () => {
             className='swiper-container'
         >
             <SwiperSlide>
-                <img src={Images.MainImage1} alt="MainImage1" />
+                <img src={Images.MainImage1} alt="MainImage1" className='mainimage'/>
             </SwiperSlide>
             <SwiperSlide>
-                <img src={Images.MainImage2} alt="MainImage2" />
+                <img src={Images.MainImage2} alt="MainImage2" className='mainimage'/>
             </SwiperSlide>
             <SwiperSlide>
-                <img src={Images.MainImage3} alt="MainImage3" />
+                <img src={Images.MainImage3} alt="MainImage3" className='mainimage'/>
             </SwiperSlide>
             <SwiperSlide>
-                <img src={Images.MainImage4} alt="MainImage4" />
+                <img src={Images.MainImage4} alt="MainImage4" className='mainimage'/>
             </SwiperSlide>
             <SwiperSlide>
-                <img src={Images.MainImage5} alt="MainImage5" />
+                <img src={Images.MainImage5} alt="MainImage5" className='mainimage'/>
             </SwiperSlide>
             <SwiperSlide>
-                <img src={Images.MainImage6} alt="MainImage6" />
+                <img src={Images.MainImage6} alt="MainImage6" className='mainimage'/>
             </SwiperSlide>
         </Swiper>
     )

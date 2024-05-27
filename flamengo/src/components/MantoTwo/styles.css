@@ -21,7 +21,6 @@
 }
 
 .mantotwo-card{
-    background-color: #f3f3f3;
     width: 500px;
     max-height: 300px;
     display: flex;
@@ -62,5 +61,5 @@
 .mantotwocard-price{
     font-size: 16px;
     color: #d2232a;
-    font-weight: 600;
+    font-weight: 700;
 }

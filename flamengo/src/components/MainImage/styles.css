@@ -1,17 +1,21 @@
-.swiper-container{
-    margin: 0 auto;
+.swiper-container {
+  margin: 0 auto;
 }
 
 .swiper-pagination-bullet {
-    background-color: #cccccc;
-    opacity: 0.8;
-    width: 15px;
-    height: 15px;
-    transition: 0.7s; 
-  }
-  
-  .swiper-pagination-bullet-active {
-    background-color: #D2232A;
-    opacity: 1;
-    transform: scale(1.2);
-  }
+  background-color: #cccccc;
+  opacity: 0.8;
+  width: 15px;
+  height: 15px;
+  transition: 0.7s;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #D2232A;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.mainimage{
+  width: 100%;
+}
