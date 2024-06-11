@@ -4,19 +4,13 @@ import { Link } from 'react-router-dom'
 
 import './CadLog.css'
 
-// Guardando os dados do cadastro do usuário no test.js
-
 const UserCadlog = () => {
     return (
         <div>
             <div className='cadlog-main-container'>
                 <div className="log-container">
-                    <h2>INICIAR SESSÃO</h2>
                     <div className="cadlog-form-container">
-                        <div className="headerform-container">
-                            <h3 style={{ borderBottom: '2px solid #d2232a' }}>Usuário</h3>
-                            <Link to="/funcionario" style={{ color: '#d2232a', textDecoration: 'none', }}><h3>Funcionário</h3></Link>
-                        </div>
+                        <h2>INICIAR SESSÃO</h2>
                         <form>
                             <label>
                                 <span>Email</span>
@@ -36,12 +30,8 @@ const UserCadlog = () => {
             </div>
             <div className='cadlog-main-container' style={{ border: 'none', marginBottom: '0' }}>
                 <div className="log-container">
-                    <h2>NÃO TEM UMA CONTA? CADASTRE-SE</h2>
                     <div className="cadlog-form-container">
-                        <div className="headerform-container">
-                            <h3 style={{ borderBottom: '2px solid #d2232a' }}>Usuário</h3>
-                            <Link to="/funcionario" style={{ color: '#d2232a', textDecoration: 'none', }}><h3>Funcionário</h3></Link>
-                        </div>
+                        <h2>NÃO TEM UMA CONTA? CADASTRE-SE</h2>
                         <form>
                             <label>
                                 <span>Nome</span>

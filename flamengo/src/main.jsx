@@ -17,7 +17,6 @@ import Feminine from './routes/Feminine.jsx';
 import Shoes from './routes/Shoes.jsx';
 import Accessories from './routes/Accessories.jsx';
 import UserCadLogPage from './routes/UserCadLogPage.jsx';
-import FuncCadLogPage from './routes/FuncCadLogPage.jsx';
 import ConfirmCpfPage from './routes/ConfirmCpfPage.jsx';
 import CoderPage from './routes/CoderPage.jsx';
 import ChangePasswordPage from './routes/ChangePasswordPage.jsx';
@@ -30,6 +29,7 @@ import ViewProductPage from './routes/ViewProductPage.jsx';
 import MantoOnePage from './routes/MantoOnePage.jsx';
 import MantoTwoPage from './routes/MantoTwoPage.jsx';
 import MantoThreePage from './routes/MantoThreePage.jsx';
+import BagPage from './routes/BagPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -56,10 +56,6 @@ const router = createBrowserRouter([
       {
         path: "/usuario",
         element: <UserCadLogPage />,
-      },
-      {
-        path: "/funcionario",
-        element: <FuncCadLogPage />,
       },
       {
         path: "/confirmar-cpf",
@@ -108,6 +104,10 @@ const router = createBrowserRouter([
       {
         path: "/manto-tres",
         element: <MantoThreePage />,
+      },
+      {
+        path: "/sacola",
+        element: <BagPage />,
       },
     ],
   },
