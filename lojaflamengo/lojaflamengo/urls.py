@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from rest_framework.routers import SimpleRouter
+from django.conf import settings
+from django.conf.urls.static import static
 
 from produtos.api.views import ProdutoViewSet
 from usuarios.api.views import UsuarioViewSet
@@ -28,4 +30,4 @@ router.register("api/usuarios", UsuarioViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]+router.urls
+]+router.urls, static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
