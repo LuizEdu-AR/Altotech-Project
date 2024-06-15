@@ -14,14 +14,12 @@ import ErrorPage from './routes/ErrorPage.jsx';
 
 import Masculine from './routes/Masculine.jsx';
 import Feminine from './routes/Feminine.jsx';
-import Shoes from './routes/Shoes.jsx';
 import Accessories from './routes/Accessories.jsx';
 import UserCadLogPage from './routes/UserCadLogPage.jsx';
 import ConfirmCpfPage from './routes/ConfirmCpfPage.jsx';
 import CoderPage from './routes/CoderPage.jsx';
 import ChangePasswordPage from './routes/ChangePasswordPage.jsx';
 import CadClothesPage from './routes/CadClothesPage.jsx';
-import CadShoespage from './routes/CadShoesPage.jsx';
 import CadAccessoriesPage from './routes/CadAccessoriesPage.jsx';
 import DelProductPage from './routes/DelProductPage.jsx';
 import SearchPage from './routes/SearchPage.jsx';
@@ -46,10 +44,6 @@ const router = createBrowserRouter([
         element: <Feminine />,
       },
       {
-        path: "/calcados",
-        element: <Shoes />,
-      },
-      {
         path: "/acessorios",
         element: <Accessories />,
       },
@@ -72,10 +66,6 @@ const router = createBrowserRouter([
       {
         path: "/cadastrar-roupas",
         element: <CadClothesPage />,
-      },
-      {
-        path: "/cadastrar-calcados",
-        element: <CadShoespage />,
       },
       {
         path: "/cadastrar-acessorios",

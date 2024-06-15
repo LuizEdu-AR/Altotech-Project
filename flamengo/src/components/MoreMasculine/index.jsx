@@ -12,22 +12,22 @@ import { MoreMasculineMock } from './mocks';
 const MoreMasculine = () => {
   return (
     <div>
-        <h2 className='h2-more' style={{marginTop: '45px', marginBottom: '45px'}}>MAIS VENDIDOS MASCULINO</h2>
+      <h2 className='h2-more' style={{ marginTop: '45px', marginBottom: '45px' }}>MAIS VENDIDOS MASCULINO</h2>
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Scrollbar, A11y,]}
         spaceBetween={50}
         slidesPerView={4}
         pagination={{ clickable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
         className='swiper-container'
-        style={{height: '415px', marginLeft: '45px'}}
+        style={{ height: '415px', marginLeft: '45px' }}
       >
-        {MoreMasculineMock.map((item)=>{
-          return(
+        {MoreMasculineMock.map((item) => {
+          return (
             <SwiperSlide key={item.id}>
               <div className="products-container">
-                <img src={item.url} alt={item.textAlt}/>
+                <img src={item.url} alt={item.textAlt} />
                 <h3>{item.text}</h3>
                 <p>{item.price}</p>
                 <button>COMPRAR</button>
@@ -35,7 +35,7 @@ const MoreMasculine = () => {
             </SwiperSlide>
           )
         })}
-      </Swiper> 
+      </Swiper>
     </div>
   )
 }

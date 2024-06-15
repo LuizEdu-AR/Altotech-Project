@@ -1,4 +1,4 @@
-.cadshoes-main-container{
+.cadaccessories-main-container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,19 +7,19 @@
     border-bottom: 3px solid #D2232A;
 }
 
-.log-container{
+.cad-container{
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.log-container h2{
+.cad-container h2{
     font-size: 24px;
     color: #D2232A;
     margin-bottom: 45px;
 }
 
-.cadshoes-form-container{
+.cadaccessories-form-container{
     background-color: #ededed;
     border-radius: 30px;
     display: flex;
@@ -28,7 +28,7 @@
     width: 710px;
 }
 
-.shoes-container{
+.clothes-container{
     display: flex;
     align-items: center;
     gap: 100px;
@@ -38,12 +38,12 @@
     height: 76px;
 }
 
-.shoes-container h3{
+.clothes-container h3{
     font-size: 24px;
     font-weight: 500;
 }
 
-.cadshoes-form-container form{
+.cadaccessories-form-container form{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -52,18 +52,18 @@
     width: 367px;
 }
 
-.cadshoes-form-container label{
+.cadaccessories-form-container label{
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.cadshoes-form-container span{
+.cadaccessories-form-container span{
     color: #D2232A;
     font-weight: 500;
 }
 
-.cadshoes-form-container input[type="email"], input[type="password"], input[type="text"]{
+.cadaccessories-form-container input[type="email"], input[type="password"], input[type="text"]{
     border: 1px solid #d9d9d9;
     padding: 10px;
     font-size: 16px;
@@ -71,7 +71,7 @@
 }
 
 
-.submit-cadshoes{
+.submit-cadaccessories{
     background-color: #D2232A;
     color: #fff;
     border: none;
@@ -79,13 +79,7 @@
     padding: 10px;
 }
 
-.misspass{
-    font-size: 12px;
-    text-decoration: underline;
-    margin-bottom: 5px;
-}
-
-.select-cadshoes{
+.select-cadaccessories{
     border: 1px solid #d9d9d9;
     padding: 10px;
     font-size: 16px;
@@ -93,7 +87,7 @@
     color: #D2232A;
 }
 
-.date-cadshoes{
+.date-cadaccessories{
     border: 1px solid #d9d9d9;
     padding: 10px;
     font-size: 16px;
@@ -101,7 +95,7 @@
     color: #D2232A;
 }
 
-.cadshoes-submit{
+.cadaccessories-submit{
     padding: 10px;
     font-size: 16px;
     border: none;
@@ -121,6 +115,6 @@
 }
 
 .cadoptions-container h3{
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 500;
 }

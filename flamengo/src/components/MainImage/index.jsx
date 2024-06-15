@@ -1,6 +1,6 @@
 import { Images } from '../../assets/img'
 
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 // preciso que meu swiper passe os swiperslide atutomáticamente
@@ -15,10 +15,14 @@ const MainImage = () => {
     return (
         <div className="swiper-main-container">
             <Swiper
-                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
                 spaceBetween={50}
                 slidesPerView={1}
                 pagination={{ clickable: true }}
+                autoplay={{
+                    delay: 5000,
+                    disableOnInteraction: false,
+                }}
                 onSwiper={(swiper) => console.log(swiper)}
                 onSlideChange={() => console.log('slide change')}
                 className='swiper-container'
