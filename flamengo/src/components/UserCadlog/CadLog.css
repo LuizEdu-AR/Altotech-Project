@@ -13,10 +13,11 @@
     flex-direction: column;
 }
 
-.log-container h2{
+.cadlog-form-container h2{
     font-size: 24px;
+    font-weight: 700;
     color: #D2232A;
-    margin-bottom: 45px;
+    margin: 45px 0 0 0;
 }
 
 .cadlog-form-container{
@@ -48,7 +49,7 @@
     align-items: center;
     flex-direction: column;
     gap: 20px;
-    margin: 45px 0;
+    margin-bottom: 45px;
     width: 367px;
 }
 

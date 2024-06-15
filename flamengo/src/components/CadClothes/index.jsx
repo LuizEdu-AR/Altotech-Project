@@ -18,7 +18,6 @@ const CadClothes = () => {
                         </div>
                         <div className="cadoptions-container">
                             <h3 style={{ borderBottom: '2px solid #000' }}>Roupas</h3>
-                            <Link to="/cadastrar-calcados" style={{ color: '#000', textDecoration: 'none' }}><h3>Calçados</h3></Link>
                             <Link to="/cadastrar-acessorios" style={{ color: '#000', textDecoration: 'none' }}><h3>Acessórios</h3></Link>
                         </div>
                         <form>
