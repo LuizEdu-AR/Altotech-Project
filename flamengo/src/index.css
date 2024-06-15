@@ -3,4 +3,5 @@
   margin: 0;
   font-family: "Poppins", sans-serif;
   cursor: url("./assets/img/navegacao.png"), default;
+  box-sizing: border-box;
 }

@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 import './styles.css'
 
 const CadAccessories = () => {
-  return (
-    <div>
+    return (
+        <div>
             <div className='cadaccessories-main-container' style={{ border: 'none', marginBottom: '0' }}>
                 <div className="cad-container">
                     <h2>SEJA BEM-VINDO</h2>
@@ -51,11 +51,15 @@ const CadAccessories = () => {
                             </label>
                             <label>
                                 <span>Imagem (recomendado ser 200x200)</span>
-                                <input type="file" name="imagem" required className='cadaccessories-file'/>
+                                <input type="file" name="imagem" required className='cadaccessories-file' />
                             </label>
                             <label>
                                 <span>Confirmar senha</span>
-                                <input type="password" name="password" required />
+                                <input
+                                    type="password"
+                                    name="password"
+                                    required
+                                />
                             </label>
                             <label>
                                 <input type="submit" value="CADASTRAR" className='cadaccessories-submit' />
@@ -65,7 +69,7 @@ const CadAccessories = () => {
                 </div>
             </div>
         </div>
-  )
+    )
 }
 
 export default CadAccessories
